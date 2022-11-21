@@ -1,3 +1,9 @@
+"""
+!!! note "Automatic Doc creation"
+    In this example one still has to create the `Inputs` and `Outputs` tables by hand, 
+    which is pretty tedius. So to investigate if this can be a more automated process similar 
+    to standard docstrings.
+"""
 from kedro.pipeline import Pipeline, node
 from kedro.pipeline.modular_pipeline import pipeline
 
@@ -5,6 +11,30 @@ from .nodes import evaluate_model, split_data, train_model
 
 
 def create_pipeline(**kwargs) -> Pipeline:
+    """ ## Overview
+    
+    The `data_science` pipeline uses the `model_input_table` and splits the 
+    dataset into a train and test set and then uses `LinearRegression` to build a model
+    to predict flight prices. It then evaluates the model and prints the result to the log.
+    It creates 2 instances of the pipelines with independent parameters, `active_modelling_pipeline`
+    and `candidate_modelling_pipeline`.
+
+    ## Inputs:
+
+    | Name                | Type               | Description                             |
+    | ------------------- | ------------------ | --------------------------------------- |
+    | `model_input_table` | `pandas.DataFrame` | Tidied up and combined list of all </br>shuttles with companies and reviews |
+ 
+
+
+    **Outputs:**
+
+    | Name                                   | Type                 | Description                             |
+    | -------------------------------------- | -------------------- | --------------------------------------- |
+    | `active_modelling_pipeline.regressor`    | `pickle.PickleDataSet` |  Active model in production             |
+    | `candidate_modelling_pipeline.regressor` | `pickle.PickleDataSet` |  Candidate model in development         |
+    """
+
     pipeline_instance = pipeline(
         [
             node(

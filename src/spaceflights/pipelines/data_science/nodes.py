@@ -1,3 +1,10 @@
+"""
+!!! note "Automatic Doc creation"
+    Just writing standard docstring is fine for nodes - they are parsed using `mkdocstrings`
+    and inserted into the main markdown files.
+"""
+
+
 import logging
 from typing import Dict, Tuple
 

@@ -1,0 +1,22 @@
+site_name: SPaceflights
+
+#nav:
+#  - Home: index.md
+#  - About: about.md
+
+theme: readthedocs #material
+markdown_extensions:
+  - admonition
+  - toc:
+        baselevel: 3
+
+plugins:
+  - search
+  - mkdocstrings
+#  - gen-files:
+#      scripts:
+#        - gen_pages.py
+
+
+
+
