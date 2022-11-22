@@ -8,11 +8,11 @@ The `data_science` pipeline consumes the `model_input_table` and generates model
 
 !!! note "Automatic Doc creation"
     This is a standalone KedroViz React component in a static website.
-    It can be embedded in the document as seen here or accessed as a [separate page.](/kedro_viz/index.html){:target="\blank"}
+    It can be embedded in the document as seen here or accessed as a [separate page.](../../kedro_viz/index.html){:target="\blank"}
 
 
-## KedroViz Pipeline Viewer [>>](/kedro_viz/index.html){:target="\blank"}
+## KedroViz Pipeline Viewer [>>](../../kedro_viz/index.html){:target="\blank"}
 
-<script defer="defer" src="/kedro_viz/static/js/main.de525c6c.js">
-</script><link href="/kedro_viz/static/css/main.957ee550.css" rel="stylesheet">
+<script defer="defer" src="../../kedro_viz/static/js/main.de525c6c.js">
+</script><link href="../../kedro_viz/static/css/main.957ee550.css" rel="stylesheet">
 <div id="kedroviz"></div>

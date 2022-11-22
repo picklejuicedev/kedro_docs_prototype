@@ -8,12 +8,12 @@
 
 ## Index
 
-- [Goals of the project](/goals/)
+- [Goals of the project](goals)
 - [Prerequisites](prerequisites)
-- [Input, Intermediate and Output Data](data)
-- [Processing pipeline](/pipelines/_pipeline_overview)
+- [Input, Intermediate and Output Data](data/_Data_overview)
+- [Processing pipeline](pipelines/_pipeline_overview)
 - [Installation, Usage and settings](usage)
-- [About](/about/)
+- [About](about)
 
 
 
