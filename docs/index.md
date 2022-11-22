@@ -11,7 +11,7 @@
 - [Goals of the project](goals)
 - [Prerequisites](prerequisites)
 - [Input, Intermediate and Output Data](data/_Data_overview)
-- [Processing pipeline](pipelines/_pipeline_overview)
+- [Processing pipeline](pipelines/_Pipeline_overview)
 - [Installation, Usage and settings](usage)
 - [About](about)
 
