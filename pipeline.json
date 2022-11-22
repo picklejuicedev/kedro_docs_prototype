@@ -1,108 +1,8 @@
 {
     "edges": [
         {
-            "source": "daf35ba0",
-            "target": "b9240df7"
-        },
-        {
-            "source": "23c94afb",
-            "target": "data_science.candidate_modelling_pipeline"
-        },
-        {
-            "source": "23c94afb",
-            "target": "298ad1a8"
-        },
-        {
-            "source": "e95f6986",
-            "target": "8d702e6f"
-        },
-        {
-            "source": "58feae8a",
-            "target": "298ad1a8"
-        },
-        {
-            "source": "b9240df7",
-            "target": "23c94afb"
-        },
-        {
-            "source": "298ad1a8",
-            "target": "0fdb3339"
-        },
-        {
-            "source": "25e26176",
-            "target": "cb65a20b"
-        },
-        {
             "source": "de286c87",
             "target": "daf35ba0"
-        },
-        {
-            "source": "ce201600",
-            "target": "8d702e6f"
-        },
-        {
-            "source": "480fad18",
-            "target": "3bf31318"
-        },
-        {
-            "source": "f1d596c2",
-            "target": "0b602e80"
-        },
-        {
-            "source": "data_processing",
-            "target": "23c94afb"
-        },
-        {
-            "source": "cf731c22",
-            "target": "f4b14037"
-        },
-        {
-            "source": "58feae8a",
-            "target": "data_science"
-        },
-        {
-            "source": "23c94afb",
-            "target": "data_science"
-        },
-        {
-            "source": "0b602e80",
-            "target": "e5a9ec27"
-        },
-        {
-            "source": "e5a9ec27",
-            "target": "b9240df7"
-        },
-        {
-            "source": "9098abb2",
-            "target": "e95f6986"
-        },
-        {
-            "source": "cb65a20b",
-            "target": "3bf31318"
-        },
-        {
-            "source": "25e26176",
-            "target": "480fad18"
-        },
-        {
-            "source": "3bf31318",
-            "target": "cf731c22"
-        },
-        {
-            "source": "98872f75",
-            "target": "f4b14037"
-        },
-        {
-            "source": "7b2c6e04",
-            "target": "data_processing"
-        },
-        {
-            "source": "3a20cfc7",
-            "target": "data_science.candidate_modelling_pipeline"
-        },
-        {
-            "source": "23c94afb",
-            "target": "25e26176"
         },
         {
             "source": "298ad1a8",
@@ -113,6 +13,42 @@
             "target": "data_processing"
         },
         {
+            "source": "480fad18",
+            "target": "3bf31318"
+        },
+        {
+            "source": "23c94afb",
+            "target": "data_science"
+        },
+        {
+            "source": "3a20cfc7",
+            "target": "data_science.candidate_modelling_pipeline"
+        },
+        {
+            "source": "58feae8a",
+            "target": "data_science"
+        },
+        {
+            "source": "431035f8",
+            "target": "9098abb2"
+        },
+        {
+            "source": "23c94afb",
+            "target": "25e26176"
+        },
+        {
+            "source": "7b2c6e04",
+            "target": "data_processing"
+        },
+        {
+            "source": "25e26176",
+            "target": "cb65a20b"
+        },
+        {
+            "source": "e5a9ec27",
+            "target": "b9240df7"
+        },
+        {
             "source": "298ad1a8",
             "target": "ce201600"
         },
@@ -121,55 +57,119 @@
             "target": "data_processing"
         },
         {
-            "source": "431035f8",
-            "target": "9098abb2"
-        },
-        {
             "source": "3a20cfc7",
             "target": "data_science"
-        },
-        {
-            "source": "257af0ec",
-            "target": "f4b14037"
-        },
-        {
-            "source": "25e26176",
-            "target": "98872f75"
-        },
-        {
-            "source": "7380eb47",
-            "target": "9098abb2"
-        },
-        {
-            "source": "aed46479",
-            "target": "de286c87"
         },
         {
             "source": "3a20cfc7",
             "target": "25e26176"
         },
         {
-            "source": "7b2c6e04",
+            "source": "daf35ba0",
             "target": "b9240df7"
+        },
+        {
+            "source": "23c94afb",
+            "target": "298ad1a8"
+        },
+        {
+            "source": "f1d596c2",
+            "target": "0b602e80"
         },
         {
             "source": "25e26176",
             "target": "257af0ec"
         },
         {
-            "source": "298ad1a8",
-            "target": "431035f8"
+            "source": "cf731c22",
+            "target": "f4b14037"
+        },
+        {
+            "source": "58feae8a",
+            "target": "298ad1a8"
+        },
+        {
+            "source": "257af0ec",
+            "target": "f4b14037"
+        },
+        {
+            "source": "7380eb47",
+            "target": "9098abb2"
+        },
+        {
+            "source": "e95f6986",
+            "target": "8d702e6f"
+        },
+        {
+            "source": "3bf31318",
+            "target": "cf731c22"
+        },
+        {
+            "source": "0b602e80",
+            "target": "e5a9ec27"
+        },
+        {
+            "source": "ce201600",
+            "target": "8d702e6f"
         },
         {
             "source": "0fdb3339",
             "target": "8d702e6f"
         },
         {
-            "source": "58feae8a",
-            "target": "data_science.active_modelling_pipeline"
+            "source": "data_processing",
+            "target": "23c94afb"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "0fdb3339"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "431035f8"
+        },
+        {
+            "source": "25e26176",
+            "target": "98872f75"
         },
         {
             "source": "23c94afb",
+            "target": "data_science.candidate_modelling_pipeline"
+        },
+        {
+            "source": "7b2c6e04",
+            "target": "b9240df7"
+        },
+        {
+            "source": "cb65a20b",
+            "target": "3bf31318"
+        },
+        {
+            "source": "aed46479",
+            "target": "de286c87"
+        },
+        {
+            "source": "9098abb2",
+            "target": "e95f6986"
+        },
+        {
+            "source": "23c94afb",
+            "target": "data_science.active_modelling_pipeline"
+        },
+        {
+            "source": "98872f75",
+            "target": "f4b14037"
+        },
+        {
+            "source": "b9240df7",
+            "target": "23c94afb"
+        },
+        {
+            "source": "25e26176",
+            "target": "480fad18"
+        },
+        {
+            "source": "58feae8a",
             "target": "data_science.active_modelling_pipeline"
         }
     ],
@@ -183,15 +183,11 @@
         "__root__": {
             "children": [
                 {
-                    "id": "7b2c6e04",
-                    "type": "data"
-                },
-                {
                     "id": "data_processing",
                     "type": "modularPipeline"
                 },
                 {
-                    "id": "23c94afb",
+                    "id": "f1d596c2",
                     "type": "data"
                 },
                 {
@@ -203,7 +199,11 @@
                     "type": "data"
                 },
                 {
-                    "id": "f1d596c2",
+                    "id": "23c94afb",
+                    "type": "data"
+                },
+                {
+                    "id": "7b2c6e04",
                     "type": "data"
                 }
             ],
@@ -215,31 +215,31 @@
         "data_processing": {
             "children": [
                 {
-                    "id": "0b602e80",
-                    "type": "task"
+                    "id": "daf35ba0",
+                    "type": "data"
                 },
                 {
                     "id": "b9240df7",
                     "type": "task"
                 },
                 {
-                    "id": "de286c87",
+                    "id": "0b602e80",
                     "type": "task"
-                },
-                {
-                    "id": "daf35ba0",
-                    "type": "data"
                 },
                 {
                     "id": "e5a9ec27",
                     "type": "data"
+                },
+                {
+                    "id": "de286c87",
+                    "type": "task"
                 }
             ],
             "id": "data_processing",
             "inputs": [
                 "f1d596c2",
-                "aed46479",
-                "7b2c6e04"
+                "7b2c6e04",
+                "aed46479"
             ],
             "name": "Data Processing",
             "outputs": [
@@ -269,23 +269,7 @@
         "data_science.active_modelling_pipeline": {
             "children": [
                 {
-                    "id": "e95f6986",
-                    "type": "data"
-                },
-                {
-                    "id": "9098abb2",
-                    "type": "task"
-                },
-                {
-                    "id": "298ad1a8",
-                    "type": "task"
-                },
-                {
-                    "id": "8d702e6f",
-                    "type": "task"
-                },
-                {
-                    "id": "7380eb47",
+                    "id": "431035f8",
                     "type": "data"
                 },
                 {
@@ -297,8 +281,24 @@
                     "type": "data"
                 },
                 {
-                    "id": "431035f8",
+                    "id": "9098abb2",
+                    "type": "task"
+                },
+                {
+                    "id": "e95f6986",
                     "type": "data"
+                },
+                {
+                    "id": "298ad1a8",
+                    "type": "task"
+                },
+                {
+                    "id": "7380eb47",
+                    "type": "data"
+                },
+                {
+                    "id": "8d702e6f",
+                    "type": "task"
                 }
             ],
             "id": "data_science.active_modelling_pipeline",
@@ -312,15 +312,7 @@
         "data_science.candidate_modelling_pipeline": {
             "children": [
                 {
-                    "id": "480fad18",
-                    "type": "data"
-                },
-                {
-                    "id": "f4b14037",
-                    "type": "task"
-                },
-                {
-                    "id": "25e26176",
+                    "id": "3bf31318",
                     "type": "task"
                 },
                 {
@@ -328,19 +320,27 @@
                     "type": "data"
                 },
                 {
+                    "id": "cf731c22",
+                    "type": "data"
+                },
+                {
                     "id": "98872f75",
                     "type": "data"
+                },
+                {
+                    "id": "25e26176",
+                    "type": "task"
                 },
                 {
                     "id": "cb65a20b",
                     "type": "data"
                 },
                 {
-                    "id": "3bf31318",
+                    "id": "f4b14037",
                     "type": "task"
                 },
                 {
-                    "id": "cf731c22",
+                    "id": "480fad18",
                     "type": "data"
                 }
             ],

@@ -1,14 +1,15 @@
-site_name: SPaceflights
+site_name: Spaceflights
 
 #nav:
 #  - Home: index.md
 #  - About: about.md
 
-theme: readthedocs #material
+theme: material # readthedocs #material
 markdown_extensions:
   - admonition
   - toc:
         baselevel: 3
+  - attr_list
 
 plugins:
   - search
