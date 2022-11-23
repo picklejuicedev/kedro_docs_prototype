@@ -2,7 +2,7 @@
 
 !!! note
     This is a documentation prototype for the `spaceflight tutorial`. It is pretending to be *proper* documentation so that it can serve as a best/good practice exmple.
-    Check out Doc creation for how to use and extend it.
+    Notes were used throughout to highlight specific features.
 
 
 
@@ -14,6 +14,6 @@
 - [Processing pipeline](pipelines/_Pipeline_overview)
 - [Installation, Usage and settings](usage)
 - [About](about)
-
+- [Readme](README_copy)
 
 

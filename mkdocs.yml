@@ -1,8 +1,23 @@
 site_name: Spaceflights
 
-#nav:
-#  - Home: index.md
-#  - About: about.md
+nav:
+  - Home: index.md
+  - Goals: goals.md
+  - Prerequisites: prerequisites.md
+  - Usage: usage.md
+  - Parameters:
+    - parameters/data_science.md
+  - Data:
+    - data/_Data_overview.md
+    - data/companies.md
+    - data/shuttles.md
+    - data/reviews.md
+  - Pipelines:
+    - pipelines/_Pipeline_overview.md
+    - pipelines/data_processing.md
+    - pipelines/data_science.md
+  - About: about.md
+  - Readme: README_copy.md
 
 theme: material # readthedocs #material
 markdown_extensions:
@@ -14,6 +29,7 @@ markdown_extensions:
 plugins:
   - search
   - mkdocstrings
+  - include-markdown
 #  - gen-files:
 #      scripts:
 #        - gen_pages.py

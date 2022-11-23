@@ -1,5 +1,5 @@
 !!! note
-	Describing the data is tricky as there are so many different data types. I think what would work is to have a genric front page simply listing the catalog and data types, but then have a separate page for more details. We can autogenerate some from the data itself i.e. using `pandas-profiling` or `AutoViz` or some simple `pandas` commands. This should be easily extendable for other DataSets to enable automatic generation.
+	Not sure how to handle all the different types of `datasets`. What may work is to have a generic front page simply listing the `catalog` and data types, but then have a separate page for more details. We can autogenerate some from the data itself i.e. using `pandas-profiling` or some simple `pandas` commands. This should be easily extendable for other DataSets to enable automatic generation. If the user can annotate `details` in the `catalog.yml` files what documentation type is required then this needs little manual input.
 
 
 
