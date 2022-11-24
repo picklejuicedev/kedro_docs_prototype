@@ -8,7 +8,7 @@
 
 Assuming you have installed all [prerequisites](prerequisites.md), you can now run a local test server:
 ```
-    mkdocs serve
+mkdocs serve
 ```
 
 It will now collect the documentation and serve them up to alocal host:
@@ -21,7 +21,7 @@ INFO     -  [16:15:17] Watching paths for changes: 'docs', 'mkdocs.yml', 'README
 INFO     -  [16:15:17] Serving on http://127.0.0.1:8000/
 ```
 
-You can now open a browser and point to `http://127.0.0.1:8000/` and you should see the documentation website.
+Open a browser and point to `http://127.0.0.1:8000/` and you should see the documentation website.
 
 This page will auto-reload on any changes, so try modifying any or the .md files in the `/docs` folder and on save it will be reflected on the site. This is a fast and easy workflow to get all manual docs written and check the automatically generated ones look correct.
 
@@ -43,5 +43,5 @@ It will automatically build the documentation and deploy to the `gh-pages` branc
 ## More help
 
 Have a look at the excellent [mkdocs website](https://www.mkdocs.org/) for more help.
-HOpefully this shold get you started. It is only a prototype so it is not intended to be comprehensive.
+Hopefully this shold get you started. It is only a prototype so it is not intended to be comprehensive.
 

@@ -4,7 +4,7 @@
 
 Parameters for the currently active model used in production.
 
-   ### model_options:
+### model_options:
 
 | Param        | Value                     | Description                          |
 | ------------ | ------------------------- | ------------------------------------ |

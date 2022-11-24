@@ -12,6 +12,7 @@ nav:
     - data/companies.md
     - data/shuttles.md
     - data/reviews.md
+    - data/model_input_table.md
   - Pipelines:
     - pipelines/_Pipeline_overview.md
     - pipelines/data_processing.md
@@ -19,7 +20,7 @@ nav:
   - About: about.md
   - Readme: README_copy.md
 
-theme: material # readthedocs #material
+theme: readthedocs # readthedocs #material
 markdown_extensions:
   - admonition
   - toc:

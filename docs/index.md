@@ -12,7 +12,7 @@
 - [Prerequisites](prerequisites)
 - [Input, Intermediate and Output Data](data/_Data_overview)
 - [Processing pipeline](pipelines/_Pipeline_overview)
-- [Installation, Usage and settings](usage)
+- [Usage](usage) and [Parameters](parameters/data_science.md)
 - [About](about)
 - [Readme](README_copy)
 
