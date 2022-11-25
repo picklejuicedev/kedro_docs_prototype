@@ -1,8 +1,8 @@
 # Usage
 
 !!! note
-    Normally you wold discuss how to use the project here, i.e. the spaceflights code.
-    However it is much more interesting to highlight how to use the docuemntation system.
+    Normally you wold discuss how to use the project here, i.e. the spaceflights code and/or model.
+    However it is much more interesting to highlight how to use the documentation system.
 
 ## Run a local server
 
@@ -11,7 +11,7 @@ Assuming you have installed all [prerequisites](prerequisites.md), you can now r
 mkdocs serve
 ```
 
-It will now collect the documentation and serve them up to alocal host:
+It will collect the documentation and serve them up to a local host:
 ```
 (docs-prototype-py3.10) PS C:\code\kedro\docs_prototype\spaceflights> mkdocs serve
 INFO     -  Building documentation...
@@ -23,25 +23,40 @@ INFO     -  [16:15:17] Serving on http://127.0.0.1:8000/
 
 Open a browser and point to `http://127.0.0.1:8000/` and you should see the documentation website.
 
-This page will auto-reload on any changes, so try modifying any or the .md files in the `/docs` folder and on save it will be reflected on the site. This is a fast and easy workflow to get all manual docs written and check the automatically generated ones look correct.
+This page will auto-reload on any changes, so try modifying any of the .md files in the `/docs` folder and on save it will be reflected on the site. This is a fast and easy workflow to get all manual docs written and check the automatically generated ones look correct.
 
 ## Deploy docs manually
 
-Once happy with the documentation you can build it manuall using:
+Once happy with the documentation you can build the site manually using:
 
 ```
 mkdocs build
 ```
 
-It will create a static site to the subfolder `/site`. Use your ftp client or other tool to upload to your hosting platform.
+It will create a static site in the subfolder `/site`. Use your ftp client or other tool to upload to your hosting platform.
 
-## Deploy automaticall using github workflows
+## Deploy automatically using github workflows
 
 For this project a `github workflow` has been added (see `/.github/workflows/ci.yml`).
 It will automatically build the documentation and deploy to the `gh-pages` branch so will be visible at `<username>.github.io/<repository>`.
 
+## Changing the theme
+
+`mkdocs` comes with the excellent `readthedocs` theme and this is running here by default. You can switch to the `material` theme by changing the `theme` entry in `mkdocs.yml` to `material`:
+
+```
+
+...
+
+theme: material
+
+...
+
+```
+
+
 ## More help
 
 Have a look at the excellent [mkdocs website](https://www.mkdocs.org/) for more help.
-Hopefully this shold get you started. It is only a prototype so it is not intended to be comprehensive.
+Hopefully this shold get you started.
 

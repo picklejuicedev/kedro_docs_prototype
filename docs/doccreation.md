@@ -4,7 +4,7 @@ Creating documentation is not everyones favourite - it takes time away from valu
 
 ## Why documentation is a first class citizen
 
-Let's consider a newby journey (hey that we me a few weeks back) trying to learn a new product (let's say Kedro). Obviously I found the repo and the readme.md there, but this isn't really enough to get me going. I need more information about key concepts, assumptions, how to install and deploy, maybe even help develop. So here is where docs play a vital role. What does that have to do with Kedro projects? Everything, as they are also *products* in their own right. They may not be as big and complicated as a complete piece of software, but your still need to set the scene, communicate to users of your prjects how to get going, take notes of assumptions you have made and simply write down stuff that you will forget (in my case all too soon).
+Let's consider a newby journey (hey that wes me a few weeks back) trying to learn a new product (let's say Kedro). Obviously I found the repo and the readme.md there, but this isn't really enough to get me going. I need more information about key concepts, assumptions, how to install and deploy, maybe even help develop. So here is where docs play a vital role. What does that have to do with Kedro projects? Everything, as they are also *products* in their own right. They may not be as big and complicated as a complete piece of software, but your still need to set the scene, communicate to users of your prjects how to get going, take notes of assumptions you have made and simply write down stuff that you will forget (in my case all too soon).
 
 So the question is: Where do we write stuff down?
 

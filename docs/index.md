@@ -1,8 +1,8 @@
 # Welcome to Spaceflights Docs
 
 !!! note
-    This is a documentation prototype for the `spaceflight tutorial`. It is pretending to be *proper* documentation so that it can serve as a best/good practice exmple.
-    Notes were used throughout to highlight specific features.
+    This is a documentation prototype for the `spaceflight tutorial`. It is pretending to be *proper* documentation so that it can serve as an exmple.
+    Notes are used throughout to highlight specific features.
 
 
 

@@ -20,7 +20,7 @@ nav:
   - About: about.md
   - Readme: README_copy.md
 
-theme: readthedocs # readthedocs #material
+theme: material # readthedocs #material
 markdown_extensions:
   - admonition
   - toc:

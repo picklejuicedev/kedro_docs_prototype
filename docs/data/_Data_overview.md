@@ -1,5 +1,5 @@
 !!! note
-	Not sure how to handle all the different types of `datasets`. What may work is to have a generic front page like this one simply listing the `catalog` and data types, but then have a separate page for more details. We can autogenerate some from the data itself i.e. using `pandas-profiling` or some simple `pandas` commands. This should be easily extendable for other `datasets` to enable automatic generation. 
+	Not sure how to handle all the different types of `datasets`. What may work is to have a generic front page like this one simply listing the `catalog` and data types, but then have a separate pages for more details. We can autogenerate some from the data itself i.e. using `pandas-profiling` or some simple `pandas` commands. This should be extendable for other `datasets` to enable automatic generation. 
 
 
 
