@@ -5,10 +5,10 @@ The ***Spaceflights Docs*** project is a prototype static documentation for the 
 
 This static site is mostly manually edited to explore what functionality a documentation generator would need to cover. The [Prerequisites](prerequisites) and [Usage](usage) are only needed if you wish to locally generate the documentation and play with the `mkdocs` framework. Within the [data section](data/_Data_overview.md) you can explore the datasets used by this project. Extra points for those critical readers that can spot why `model_input_table` has grown to over 750k rows. [Parameters](parameters/data_science.md) make use of modular pipelines and the documentation can explain the detailed use of them. To explore the [pipelines](pipelines/_Pipeline_overview) a static version of Kedro-Viz has been included.
 
-And finally there are some [more thoughts](doccreation.md) on wy I think documentation is important and how this could be useful.
+And finally there are some [more thoughts](doccreation.md) on why I think documentation is important and how this could be useful.
 
 !!! note
-    Some of these pages are more mock documentation to give it some *meat*. Apologies if some points are repeated.
+    Some of these pages are mock documentation to give it some *meat*. Apologies if some points are repeated.
 
 ## Index
 
