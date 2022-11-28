@@ -1,8 +1,7 @@
 # Usage
 
 !!! note
-    Normally you wold discuss how to use the project here, i.e. the spaceflights code and/or model.
-    However it is much more interesting to highlight how to use the documentation system.
+    Normally you wold discuss how to use the Kedro project here, i.e. the spaceflights code and/or model. However let's use it to highlight how to use the documentation system.
 
 ## Run a local server
 

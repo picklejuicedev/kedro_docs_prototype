@@ -1,7 +1,7 @@
 """
 !!! note "Automatic Doc creation"
     In this example one still has to create the `Inputs` and `Outputs` tables by hand, 
-    which is pretty tedius. So to investigate if this can be a more automated process similar 
+    which is pretty tedius. So we should investigate if this can be a more automated process similar 
     to standard docstrings.
 """
 

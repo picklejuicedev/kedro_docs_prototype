@@ -19,8 +19,9 @@ nav:
     - pipelines/data_science.md
   - About: about.md
   - Readme: README_copy.md
+  - More thoughts: doccreation.md
 
-theme: material # readthedocs #material
+theme: readthedocs # readthedocs #material
 markdown_extensions:
   - admonition
   - toc:
