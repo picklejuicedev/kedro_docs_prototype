@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>More thoughts - Spaceflights</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "More thoughts";
+        var mkdocs_page_input_path = "doccreation.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Spaceflights
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../goals/">Goals</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../prerequisites/">Prerequisites</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../usage/">Usage</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parameters</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../parameters/data_science/">data_science</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/_Data_overview/"> Data overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/companies/">pandas.DataFrame: companies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/shuttles/">pandas.DataFrame: shuttles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/reviews/">pandas.DataFrame: reviews</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/model_input_table/">pandas.DataFrame: model_input_table</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipelines/_Pipeline_overview/"> Pipeline overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipelines/data_processing/">Data processing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pipelines/data_science/">Data science</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../README_copy/">Readme</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">More thoughts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-documentation-is-a-first-class-citizen">Why documentation is a first class citizen</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anatomy-of-a-kedro-project">Anatomy of a Kedro project</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#write-as-little-as-possible">Write as little as possible</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#make-it-easy-to-write-the-rest">Make it easy to write the rest</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#and-design-better-products">And design better products</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#building-blocks">Building blocks</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Spaceflights</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>More thoughts</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="a-new-doc-system">A new doc system</h3>
+<p>Creating documentation is not everyones favourite - it takes time away from valuable dev time and is so quickly out of date. Will anybody read it? Or are we just documenting to tick a box? </p>
+<h4 id="why-documentation-is-a-first-class-citizen">Why documentation is a first class citizen</h4>
+<p>I find it very helpful for any serious software or data project to adapt a product mindset. You embark on a journey and develop this <em>thing</em> that solves a problem. During development assumptions are made, solutions desigend and tested until finally it solves the problem that it was tasked to solve. Unless it was a one-shot project and never to be used again, there will be the need to communicate to others how it works and what it does, what assumptions were made during the design and how it can be used. Without this, the project will slowly wither away and die, especially when the original designers aren't around any more.</p>
+<p>So the question is: Where and how do we write stuff down?</p>
+<h4 id="anatomy-of-a-kedro-project">Anatomy of a Kedro project</h4>
+<p>Let's consider the different parts of a Kero project:</p>
+<ul>
+<li>Pipelines and Nodes - the <em>meaty</em> stuff!</li>
+<li>Settings - all those yaml files</li>
+<li>Data - lots of it, in many different forms</li>
+<li>Setup, Installation, Deployment - How to install or deploy it</li>
+<li>Testing - how to ensure it works correctly</li>
+<li>Usage - how should one use it, and what for</li>
+</ul>
+<p>The great news is that for many of those sections Kedro has an answer for how it should be done, committed to code and stored in a repository. So if you are a developer and understand the framework you can look up most things and make sense of the code together maybe with a high level Readme.md in the root of the repository. This may be ok for small projects but for anything more significant we need some kind of docs framework. Also what to do when some of your <em>customers</em> aren't developers that are familiar with repositories? How can you include them into the fold?</p>
+<h4 id="write-as-little-as-possible">Write as little as possible</h4>
+<p>So it is paramount that a documentation system can extract all the inherent information in a Kedro project and publish this automatically in such a way that it is readable by newcomers to the project and external stakeholders.</p>
+<p>So for example, the <code>catalog</code> defines all DataSet resources - they can easily be referenced and auto-generate documentation that then can be annotated with context. <code>nodes</code> and <code>pipelines</code> have docstrings and those can be used to explain how the parts of the processing work. <code>KedroViz</code> has a wealth of information that is best explored interactively.</p>
+<h4 id="make-it-easy-to-write-the-rest">Make it easy to write the rest</h4>
+<p>Many things just need to be written, but there is nothing more daunting than a clean white page. If we have a well documented template (or multiple templates for different types of projects) then architectural decisions have a home, assumptions can be written up quickly. Just as with pushing a developer towards using standard building blocks when creating data processing pipelines (nodes, pipelines, DataSets, etc) they should also be encourage to adopt a certain documentation structure. Consistency will then make both the writing easier and quicker, but also the reader will know where to find the information they seek as it is in the same place.</p>
+<h4 id="and-design-better-products">And design better products</h4>
+<p>Have you ever tried to document a half-cooked idea? Doesn't work! So documentation (just like testing) is a great tool to review your own work and test it for public consumption. It is one thing to make something work, quite another to build and explain it in such a way that <em>others</em> can use it easily and without errors. The job is only complete when you are not needed any more and the project can life on its own.</p>
+<h4 id="building-blocks">Building blocks</h4>
+<ul>
+<li>mkdocs documentation system based on .md documents in /docs folder</li>
+<li>write anything and it will compile into a nice looking webpage</li>
+<li>publish to github pages easily</li>
+<li>be able to include root/Readme.md as index (if possible)</li>
+<li>use mkdocsstrings to parse code and add to documentation</li>
+<li>parse settings (conf)  and annotate with comments</li>
+<li>parse catalog and provide framework for describing datasets</li>
+<li>provide boilerplate documentation for building, deploying and installing </li>
+<li>provide notebook index with comments</li>
+<li>use autogeneration to create base documentation but be able to manually annotate</li>
+<li></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../README_copy/" class="btn btn-neutral float-left" title="Readme"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../README_copy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

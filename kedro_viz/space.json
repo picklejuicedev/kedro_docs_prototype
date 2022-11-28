@@ -1,0 +1,886 @@
+{
+    "edges": [
+        {
+            "source": "de286c87",
+            "target": "daf35ba0"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "7380eb47"
+        },
+        {
+            "source": "aed46479",
+            "target": "data_processing"
+        },
+        {
+            "source": "480fad18",
+            "target": "3bf31318"
+        },
+        {
+            "source": "23c94afb",
+            "target": "data_science"
+        },
+        {
+            "source": "3a20cfc7",
+            "target": "data_science.candidate_modelling_pipeline"
+        },
+        {
+            "source": "58feae8a",
+            "target": "data_science"
+        },
+        {
+            "source": "431035f8",
+            "target": "9098abb2"
+        },
+        {
+            "source": "23c94afb",
+            "target": "25e26176"
+        },
+        {
+            "source": "7b2c6e04",
+            "target": "data_processing"
+        },
+        {
+            "source": "25e26176",
+            "target": "cb65a20b"
+        },
+        {
+            "source": "e5a9ec27",
+            "target": "b9240df7"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "ce201600"
+        },
+        {
+            "source": "f1d596c2",
+            "target": "data_processing"
+        },
+        {
+            "source": "3a20cfc7",
+            "target": "data_science"
+        },
+        {
+            "source": "3a20cfc7",
+            "target": "25e26176"
+        },
+        {
+            "source": "daf35ba0",
+            "target": "b9240df7"
+        },
+        {
+            "source": "23c94afb",
+            "target": "298ad1a8"
+        },
+        {
+            "source": "f1d596c2",
+            "target": "0b602e80"
+        },
+        {
+            "source": "25e26176",
+            "target": "257af0ec"
+        },
+        {
+            "source": "cf731c22",
+            "target": "f4b14037"
+        },
+        {
+            "source": "58feae8a",
+            "target": "298ad1a8"
+        },
+        {
+            "source": "257af0ec",
+            "target": "f4b14037"
+        },
+        {
+            "source": "7380eb47",
+            "target": "9098abb2"
+        },
+        {
+            "source": "e95f6986",
+            "target": "8d702e6f"
+        },
+        {
+            "source": "3bf31318",
+            "target": "cf731c22"
+        },
+        {
+            "source": "0b602e80",
+            "target": "e5a9ec27"
+        },
+        {
+            "source": "ce201600",
+            "target": "8d702e6f"
+        },
+        {
+            "source": "0fdb3339",
+            "target": "8d702e6f"
+        },
+        {
+            "source": "data_processing",
+            "target": "23c94afb"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "0fdb3339"
+        },
+        {
+            "source": "298ad1a8",
+            "target": "431035f8"
+        },
+        {
+            "source": "25e26176",
+            "target": "98872f75"
+        },
+        {
+            "source": "23c94afb",
+            "target": "data_science.candidate_modelling_pipeline"
+        },
+        {
+            "source": "7b2c6e04",
+            "target": "b9240df7"
+        },
+        {
+            "source": "cb65a20b",
+            "target": "3bf31318"
+        },
+        {
+            "source": "aed46479",
+            "target": "de286c87"
+        },
+        {
+            "source": "9098abb2",
+            "target": "e95f6986"
+        },
+        {
+            "source": "23c94afb",
+            "target": "data_science.active_modelling_pipeline"
+        },
+        {
+            "source": "98872f75",
+            "target": "f4b14037"
+        },
+        {
+            "source": "b9240df7",
+            "target": "23c94afb"
+        },
+        {
+            "source": "25e26176",
+            "target": "480fad18"
+        },
+        {
+            "source": "58feae8a",
+            "target": "data_science.active_modelling_pipeline"
+        }
+    ],
+    "layers": [
+        "raw",
+        "intermediate",
+        "primary",
+        "models"
+    ],
+    "modular_pipelines": {
+        "__root__": {
+            "children": [
+                {
+                    "id": "data_processing",
+                    "type": "modularPipeline"
+                },
+                {
+                    "id": "f1d596c2",
+                    "type": "data"
+                },
+                {
+                    "id": "data_science",
+                    "type": "modularPipeline"
+                },
+                {
+                    "id": "aed46479",
+                    "type": "data"
+                },
+                {
+                    "id": "23c94afb",
+                    "type": "data"
+                },
+                {
+                    "id": "7b2c6e04",
+                    "type": "data"
+                }
+            ],
+            "id": "__root__",
+            "inputs": [],
+            "name": "Root",
+            "outputs": []
+        },
+        "data_processing": {
+            "children": [
+                {
+                    "id": "daf35ba0",
+                    "type": "data"
+                },
+                {
+                    "id": "b9240df7",
+                    "type": "task"
+                },
+                {
+                    "id": "0b602e80",
+                    "type": "task"
+                },
+                {
+                    "id": "e5a9ec27",
+                    "type": "data"
+                },
+                {
+                    "id": "de286c87",
+                    "type": "task"
+                }
+            ],
+            "id": "data_processing",
+            "inputs": [
+                "f1d596c2",
+                "7b2c6e04",
+                "aed46479"
+            ],
+            "name": "Data Processing",
+            "outputs": [
+                "23c94afb"
+            ]
+        },
+        "data_science": {
+            "children": [
+                {
+                    "id": "data_science.active_modelling_pipeline",
+                    "type": "modularPipeline"
+                },
+                {
+                    "id": "data_science.candidate_modelling_pipeline",
+                    "type": "modularPipeline"
+                }
+            ],
+            "id": "data_science",
+            "inputs": [
+                "58feae8a",
+                "23c94afb",
+                "3a20cfc7"
+            ],
+            "name": "Data Science",
+            "outputs": []
+        },
+        "data_science.active_modelling_pipeline": {
+            "children": [
+                {
+                    "id": "431035f8",
+                    "type": "data"
+                },
+                {
+                    "id": "ce201600",
+                    "type": "data"
+                },
+                {
+                    "id": "0fdb3339",
+                    "type": "data"
+                },
+                {
+                    "id": "9098abb2",
+                    "type": "task"
+                },
+                {
+                    "id": "e95f6986",
+                    "type": "data"
+                },
+                {
+                    "id": "298ad1a8",
+                    "type": "task"
+                },
+                {
+                    "id": "7380eb47",
+                    "type": "data"
+                },
+                {
+                    "id": "8d702e6f",
+                    "type": "task"
+                }
+            ],
+            "id": "data_science.active_modelling_pipeline",
+            "inputs": [
+                "58feae8a",
+                "23c94afb"
+            ],
+            "name": "Active Modelling Pipeline",
+            "outputs": []
+        },
+        "data_science.candidate_modelling_pipeline": {
+            "children": [
+                {
+                    "id": "3bf31318",
+                    "type": "task"
+                },
+                {
+                    "id": "257af0ec",
+                    "type": "data"
+                },
+                {
+                    "id": "cf731c22",
+                    "type": "data"
+                },
+                {
+                    "id": "98872f75",
+                    "type": "data"
+                },
+                {
+                    "id": "25e26176",
+                    "type": "task"
+                },
+                {
+                    "id": "cb65a20b",
+                    "type": "data"
+                },
+                {
+                    "id": "f4b14037",
+                    "type": "task"
+                },
+                {
+                    "id": "480fad18",
+                    "type": "data"
+                }
+            ],
+            "id": "data_science.candidate_modelling_pipeline",
+            "inputs": [
+                "23c94afb",
+                "3a20cfc7"
+            ],
+            "name": "Candidate Modelling Pipeline",
+            "outputs": []
+        }
+    },
+    "nodes": [
+        {
+            "full_name": "preprocess_companies_node",
+            "id": "de286c87",
+            "modular_pipelines": [
+                "data_processing"
+            ],
+            "name": "Preprocess Companies Node",
+            "parameters": {},
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "companies",
+            "id": "aed46479",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Companies",
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+            "full_name": "data_processing.preprocessed_companies",
+            "id": "daf35ba0",
+            "layer": "intermediate",
+            "modular_pipelines": [
+                "data_processing"
+            ],
+            "name": "Preprocessed Companies",
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "preprocess_shuttles_node",
+            "id": "0b602e80",
+            "modular_pipelines": [
+                "data_processing"
+            ],
+            "name": "Preprocess Shuttles Node",
+            "parameters": {},
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.excel_dataset.ExcelDataSet",
+            "full_name": "shuttles",
+            "id": "f1d596c2",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Shuttles",
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+            "full_name": "data_processing.preprocessed_shuttles",
+            "id": "e5a9ec27",
+            "layer": "intermediate",
+            "modular_pipelines": [
+                "data_processing"
+            ],
+            "name": "Preprocessed Shuttles",
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "create_model_input_table_node",
+            "id": "b9240df7",
+            "modular_pipelines": [
+                "data_processing"
+            ],
+            "name": "Create Model Input Table Node",
+            "parameters": {},
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.csv_dataset.CSVDataSet",
+            "full_name": "reviews",
+            "id": "7b2c6e04",
+            "layer": "raw",
+            "modular_pipelines": [],
+            "name": "Reviews",
+            "pipelines": [
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pandas.parquet_dataset.ParquetDataSet",
+            "full_name": "model_input_table",
+            "id": "23c94afb",
+            "layer": "primary",
+            "modular_pipelines": [],
+            "name": "Model Input Table",
+            "pipelines": [
+                "data_science",
+                "__default__",
+                "data_processing"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "split_data_node",
+            "id": "298ad1a8",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Split Data Node",
+            "parameters": {
+                "data_science.active_modelling_pipeline.model_options": {
+                    "features": [
+                        "engines",
+                        "passenger_capacity",
+                        "crew",
+                        "d_check_complete",
+                        "moon_clearance_complete",
+                        "iata_approved",
+                        "company_rating",
+                        "review_scores_rating"
+                    ],
+                    "random_state": 3,
+                    "test_size": 0.2
+                }
+            },
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "params:data_science.active_modelling_pipeline.model_options",
+            "id": "58feae8a",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Params: Model Options",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "parameters"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.active_modelling_pipeline.X_train",
+            "id": "431035f8",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "X Train",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.active_modelling_pipeline.X_test",
+            "id": "ce201600",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "X Test",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.active_modelling_pipeline.y_train",
+            "id": "7380eb47",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Y Train",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.active_modelling_pipeline.y_test",
+            "id": "0fdb3339",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Y Test",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "split_data_node",
+            "id": "25e26176",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Split Data Node",
+            "parameters": {
+                "data_science.candidate_modelling_pipeline.model_options": {
+                    "features": [
+                        "engines",
+                        "passenger_capacity",
+                        "crew",
+                        "review_scores_rating"
+                    ],
+                    "random_state": 8,
+                    "test_size": 0.2
+                }
+            },
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "params:data_science.candidate_modelling_pipeline.model_options",
+            "id": "3a20cfc7",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Params: Model Options",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "parameters"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.candidate_modelling_pipeline.X_train",
+            "id": "480fad18",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "X Train",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.candidate_modelling_pipeline.X_test",
+            "id": "257af0ec",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "X Test",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.candidate_modelling_pipeline.y_train",
+            "id": "cb65a20b",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Y Train",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.candidate_modelling_pipeline.y_test",
+            "id": "98872f75",
+            "layer": null,
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Y Test",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "train_model_node",
+            "id": "9098abb2",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Train Model Node",
+            "parameters": {},
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
+            "full_name": "data_science.active_modelling_pipeline.regressor",
+            "id": "e95f6986",
+            "layer": "models",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Regressor",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "train_model_node",
+            "id": "3bf31318",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Train Model Node",
+            "parameters": {},
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": "kedro.extras.datasets.pickle.pickle_dataset.PickleDataSet",
+            "full_name": "data_science.candidate_modelling_pipeline.regressor",
+            "id": "cf731c22",
+            "layer": "models",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Regressor",
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "data"
+        },
+        {
+            "full_name": "evaluate_model_node",
+            "id": "8d702e6f",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.active_modelling_pipeline"
+            ],
+            "name": "Evaluate Model Node",
+            "parameters": {},
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "full_name": "evaluate_model_node",
+            "id": "f4b14037",
+            "modular_pipelines": [
+                "data_science",
+                "data_science.candidate_modelling_pipeline"
+            ],
+            "name": "Evaluate Model Node",
+            "parameters": {},
+            "pipelines": [
+                "data_science",
+                "__default__"
+            ],
+            "tags": [],
+            "type": "task"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_processing",
+            "id": "data_processing",
+            "layer": null,
+            "modular_pipelines": null,
+            "name": "Data Processing",
+            "pipelines": [
+                "__default__"
+            ],
+            "tags": [],
+            "type": "modularPipeline"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.active_modelling_pipeline",
+            "id": "data_science.active_modelling_pipeline",
+            "layer": null,
+            "modular_pipelines": null,
+            "name": "Active Modelling Pipeline",
+            "pipelines": [
+                "__default__"
+            ],
+            "tags": [],
+            "type": "modularPipeline"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science",
+            "id": "data_science",
+            "layer": null,
+            "modular_pipelines": null,
+            "name": "Data Science",
+            "pipelines": [
+                "__default__"
+            ],
+            "tags": [],
+            "type": "modularPipeline"
+        },
+        {
+            "dataset_type": null,
+            "full_name": "data_science.candidate_modelling_pipeline",
+            "id": "data_science.candidate_modelling_pipeline",
+            "layer": null,
+            "modular_pipelines": null,
+            "name": "Candidate Modelling Pipeline",
+            "pipelines": [
+                "__default__"
+            ],
+            "tags": [],
+            "type": "modularPipeline"
+        }
+    ],
+    "pipelines": [
+        {
+            "id": "__default__",
+            "name": "Default"
+        },
+        {
+            "id": "data_processing",
+            "name": "Data Processing"
+        },
+        {
+            "id": "data_science",
+            "name": "Data Science"
+        }
+    ],
+    "selected_pipeline": "__default__",
+    "tags": []
+}

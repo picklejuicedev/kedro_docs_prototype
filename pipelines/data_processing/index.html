@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Data processing - Spaceflights</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data processing";
+        var mkdocs_page_input_path = "pipelines/data_processing.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Spaceflights
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../goals/">Goals</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/">Prerequisites</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parameters</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../parameters/data_science/">data_science</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/_Data_overview/"> Data overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/companies/">pandas.DataFrame: companies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/shuttles/">pandas.DataFrame: shuttles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/reviews/">pandas.DataFrame: reviews</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/model_input_table/">pandas.DataFrame: model_input_table</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../_Pipeline_overview/"> Pipeline overview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Data processing</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data_science/">Data science</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../README_copy/">Readme</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../doccreation/">More thoughts</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Spaceflights</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Pipelines &raquo;</li>
+      <li>Data processing</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h4 id="pipelinedata_processingpipelinepy">pipeline.data_processing.pipeline.py</h4>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="src.spaceflights.pipelines.data_processing.pipeline"></a>
+  <div class="doc doc-contents first">
+  
+      <div class="admonition note">
+<p class="admonition-title">Automatic Doc creation</p>
+<p>In this example one still has to create the <code>Inputs</code> and <code>Outputs</code> tables by hand, 
+which is pretty tedius. So we should investigate if this can be a more automated process similar 
+to standard docstrings.</p>
+</div>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.spaceflights.pipelines.data_processing.pipeline.create_pipeline" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <h6 id="src.spaceflights.pipelines.data_processing.pipeline.create_pipeline--overview">Overview</h6>
+<p>The <code>data_processing</code> pipeline takes in the raw input data and carries 
+out preprocessing to clean up the data nd merge the 3 input tables to a 
+single <code>model_input_table</code> to be used in model creation.</p>
+<h6 id="src.spaceflights.pipelines.data_processing.pipeline.create_pipeline--inputs">Inputs:</h6>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shuttles</td>
+<td>pandas.DataFrame</td>
+<td>List of all shuttles</td>
+</tr>
+<tr>
+<td>companies</td>
+<td>pandas.DataFrame</td>
+<td>List of companies</td>
+</tr>
+<tr>
+<td>reviews</td>
+<td>pandas.DataFrame</td>
+<td>List of reviews</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outputs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model_input_table</td>
+<td>pandas.DataFrame</td>
+<td>Tidied up and combined list of all </br>shuttles with companies and reviews</td>
+</tr>
+</tbody>
+</table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/spaceflights/pipelines/data_processing/pipeline.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">create_pipeline</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Pipeline</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; ## Overview</span>
+
+<span class="sd">    The `data_processing` pipeline takes in the raw input data and carries </span>
+<span class="sd">    out preprocessing to clean up the data nd merge the 3 input tables to a </span>
+<span class="sd">    single `model_input_table` to be used in model creation.</span>
+
+<span class="sd">    ## Inputs:</span>
+
+<span class="sd">    | Name      | Type             | Description          |</span>
+<span class="sd">    | --------- | ---------------- | -------------------- |</span>
+<span class="sd">    | shuttles  | pandas.DataFrame | List of all shuttles |</span>
+<span class="sd">    | companies | pandas.DataFrame | List of companies    |</span>
+<span class="sd">    | reviews   | pandas.DataFrame | List of reviews      |</span>
+
+
+
+<span class="sd">    **Outputs:**</span>
+
+<span class="sd">    | Name              | Type             | Description                             |</span>
+<span class="sd">    | ----------------- | ---------------- | --------------------------------------- |</span>
+<span class="sd">    | model_input_table | pandas.DataFrame | Tidied up and combined list of all &lt;/br&gt;shuttles with companies and reviews |</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="k">return</span> <span class="n">pipeline</span><span class="p">(</span>
+        <span class="p">[</span>
+            <span class="n">node</span><span class="p">(</span>
+                <span class="n">func</span><span class="o">=</span><span class="n">preprocess_companies</span><span class="p">,</span>
+                <span class="n">inputs</span><span class="o">=</span><span class="s2">&quot;companies&quot;</span><span class="p">,</span>
+                <span class="n">outputs</span><span class="o">=</span><span class="s2">&quot;preprocessed_companies&quot;</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;preprocess_companies_node&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">node</span><span class="p">(</span>
+                <span class="n">func</span><span class="o">=</span><span class="n">preprocess_shuttles</span><span class="p">,</span>
+                <span class="n">inputs</span><span class="o">=</span><span class="s2">&quot;shuttles&quot;</span><span class="p">,</span>
+                <span class="n">outputs</span><span class="o">=</span><span class="s2">&quot;preprocessed_shuttles&quot;</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;preprocess_shuttles_node&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">node</span><span class="p">(</span>
+                <span class="n">func</span><span class="o">=</span><span class="n">create_model_input_table</span><span class="p">,</span>
+                <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;preprocessed_shuttles&quot;</span><span class="p">,</span> <span class="s2">&quot;preprocessed_companies&quot;</span><span class="p">,</span> <span class="s2">&quot;reviews&quot;</span><span class="p">],</span>
+                <span class="n">outputs</span><span class="o">=</span><span class="s2">&quot;model_input_table&quot;</span><span class="p">,</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;create_model_input_table_node&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">],</span>
+        <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;data_processing&quot;</span><span class="p">,</span>
+        <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;companies&quot;</span><span class="p">,</span> <span class="s2">&quot;shuttles&quot;</span><span class="p">,</span> <span class="s2">&quot;reviews&quot;</span><span class="p">],</span>
+        <span class="n">outputs</span><span class="o">=</span><span class="s2">&quot;model_input_table&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div></p>
+<h4 id="pipelinedata_processingnodespy">pipeline.data_processing.nodes.py</h4>
+
+
+<div class="doc doc-object doc-module">
+
+
+<a id="src.spaceflights.pipelines.data_processing.nodes"></a>
+  <div class="doc doc-contents first">
+  
+      <div class="admonition note">
+<p class="admonition-title">Automatic Doc creation</p>
+<p>Just writing standard docstring is fine for nodes - they are parsed using <code>mkdocstrings</code>
+and inserted into the main markdown files.</p>
+</div>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.spaceflights.pipelines.data_processing.nodes.create_model_input_table" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">create_model_input_table</span><span class="p">(</span><span class="n">shuttles</span><span class="p">,</span> <span class="n">companies</span><span class="p">,</span> <span class="n">reviews</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Combines all data to create a model input table.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>shuttles</code></td>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Preprocessed data for shuttles.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>companies</code></td>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Preprocessed data for companies.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>reviews</code></td>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Raw data for reviews.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Model input table.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/spaceflights/pipelines/data_processing/nodes.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">create_model_input_table</span><span class="p">(</span>
+    <span class="n">shuttles</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">companies</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">reviews</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Combines all data to create a model input table.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shuttles: Preprocessed data for shuttles.</span>
+<span class="sd">        companies: Preprocessed data for companies.</span>
+<span class="sd">        reviews: Raw data for reviews.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Model input table.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rated_shuttles</span> <span class="o">=</span> <span class="n">shuttles</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">reviews</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;shuttle_id&quot;</span><span class="p">)</span>
+    <span class="n">model_input_table</span> <span class="o">=</span> <span class="n">rated_shuttles</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+        <span class="n">companies</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;company_id&quot;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s2">&quot;id&quot;</span>
+    <span class="p">)</span>
+    <span class="n">model_input_table</span> <span class="o">=</span> <span class="n">model_input_table</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">model_input_table</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.spaceflights.pipelines.data_processing.nodes.preprocess_companies" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">preprocess_companies</span><span class="p">(</span><span class="n">companies</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Preprocesses the data for companies.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>companies</code></td>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Raw data.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Preprocessed data, with <code>company_rating</code> converted to a float and</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p><code>iata_approved</code> converted to boolean.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/spaceflights/pipelines/data_processing/nodes.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">preprocess_companies</span><span class="p">(</span><span class="n">companies</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Preprocesses the data for companies.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        companies: Raw data.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Preprocessed data, with `company_rating` converted to a float and</span>
+<span class="sd">        `iata_approved` converted to boolean.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">companies</span><span class="p">[</span><span class="s2">&quot;iata_approved&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">companies</span><span class="p">[</span><span class="s2">&quot;iata_approved&quot;</span><span class="p">])</span>
+    <span class="n">companies</span><span class="p">[</span><span class="s2">&quot;company_rating&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_parse_percentage</span><span class="p">(</span><span class="n">companies</span><span class="p">[</span><span class="s2">&quot;company_rating&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">companies</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="src.spaceflights.pipelines.data_processing.nodes.preprocess_shuttles" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">preprocess_shuttles</span><span class="p">(</span><span class="n">shuttles</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Preprocesses the data for shuttles.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>shuttles</code></td>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Raw data.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p>Preprocessed data, with <code>price</code> converted to a float and <code>d_check_complete</code>,</p></td>
+        </tr>
+        <tr>
+          <td>
+                <code><span title="pandas">pd</span>.<span title="pandas.DataFrame">DataFrame</span></code>
+          </td>
+          <td><p><code>moon_clearance_complete</code> converted to boolean.</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>src/spaceflights/pipelines/data_processing/nodes.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">preprocess_shuttles</span><span class="p">(</span><span class="n">shuttles</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Preprocesses the data for shuttles.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        shuttles: Raw data.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        Preprocessed data, with `price` converted to a float and `d_check_complete`,</span>
+<span class="sd">        `moon_clearance_complete` converted to boolean.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;d_check_complete&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;d_check_complete&quot;</span><span class="p">])</span>
+    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;moon_clearance_complete&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_is_true</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;moon_clearance_complete&quot;</span><span class="p">])</span>
+    <span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_parse_money</span><span class="p">(</span><span class="n">shuttles</span><span class="p">[</span><span class="s2">&quot;price&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">shuttles</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../_Pipeline_overview/" class="btn btn-neutral float-left" title=" Pipeline overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data_science/" class="btn btn-neutral float-right" title="Data science">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../_Pipeline_overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../data_science/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

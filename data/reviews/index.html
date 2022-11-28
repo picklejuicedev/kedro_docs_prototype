@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>pandas.DataFrame: reviews - Spaceflights</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "pandas.DataFrame: reviews";
+        var mkdocs_page_input_path = "data/reviews.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Spaceflights
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../goals/">Goals</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../prerequisites/">Prerequisites</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Parameters</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../parameters/data_science/">data_science</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../_Data_overview/"> Data overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../companies/">pandas.DataFrame: companies</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../shuttles/">pandas.DataFrame: shuttles</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pandas.DataFrame: reviews</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#info">Info</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-head">Table Head</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-tail">Table Tail</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#describe">Describe</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nan-counts">NaN counts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unique-values">Unique Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../model_input_table/">pandas.DataFrame: model_input_table</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Pipelines</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/_Pipeline_overview/"> Pipeline overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/data_processing/">Data processing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../pipelines/data_science/">Data science</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../README_copy/">Readme</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../doccreation/">More thoughts</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Spaceflights</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Data &raquo;</li>
+      <li>pandas.DataFrame: reviews</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h3 id="pandasdataframe-reviews">pandas.DataFrame: reviews</h3>
+<h4 id="info">Info</h4>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 77096 entries, 0 to 77095
+Data columns (total 10 columns):
+ #   Column                   Non-Null Count  Dtype  
+---  ------                   --------------  -----  
+ 0   shuttle_id               77096 non-null  int64  
+ 1   review_scores_rating     55956 non-null  float64
+ 2   review_scores_comfort    55896 non-null  float64
+ 3   review_scores_amenities  55909 non-null  float64
+ 4   review_scores_trip       55833 non-null  float64
+ 5   review_scores_crew       55902 non-null  float64
+ 6   review_scores_location   55831 non-null  float64
+ 7   review_scores_price      55828 non-null  float64
+ 8   number_of_reviews        77096 non-null  int64  
+ 9   reviews_per_month        57553 non-null  float64
+dtypes: float64(8), int64(2)
+memory usage: 5.9 MB
+
+</code></pre>
+<h4 id="table-head">Table Head</h4>
+<pre><code>   shuttle_id  review_scores_rating  review_scores_comfort  review_scores_amenities  review_scores_trip  review_scores_crew  review_scores_location  review_scores_price  number_of_reviews  reviews_per_month
+0       63561                 97.00                  10.00                     9.00               10.00               10.00                    9.00                10.00                133               1.65
+1       36260                 90.00                   8.00                     9.00               10.00                9.00                    9.00                 9.00                  3               0.09
+2       57015                 95.00                   9.00                    10.00                9.00               10.00                    9.00                 9.00                 14               0.14
+3       14035                 93.00                  10.00                     9.00                9.00                9.00                   10.00                 9.00                 39               0.42
+4       10036                 98.00                  10.00                    10.00               10.00               10.00                    9.00                 9.00                 92               0.94
+</code></pre>
+<h4 id="table-tail">Table Tail</h4>
+<pre><code>       shuttle_id  review_scores_rating  review_scores_comfort  review_scores_amenities  review_scores_trip  review_scores_crew  review_scores_location  review_scores_price  number_of_reviews  reviews_per_month
+77091        4368                   NaN                    NaN                      NaN                 NaN                 NaN                     NaN                  NaN                  0                NaN
+77092        2983                   NaN                    NaN                      NaN                 NaN                 NaN                     NaN                  NaN                  0                NaN
+77093       69684                   NaN                    NaN                      NaN                 NaN                 NaN                     NaN                  NaN                  0                NaN
+77094       21738                   NaN                    NaN                      NaN                 NaN                 NaN                     NaN                  NaN                  0                NaN
+77095       72645                   NaN                    NaN                      NaN                 NaN                 NaN                     NaN                  NaN                  0                NaN
+</code></pre>
+<h4 id="describe">Describe</h4>
+<pre><code>       shuttle_id  review_scores_rating  review_scores_comfort  review_scores_amenities  review_scores_trip  review_scores_crew  review_scores_location  review_scores_price  number_of_reviews  reviews_per_month
+count   77,096.00             55,956.00              55,896.00                55,909.00           55,833.00           55,902.00               55,831.00            55,828.00          77,096.00          57,553.00
+mean    38,548.50                 92.76                   9.52                     9.28                9.64                9.67                    9.47                 9.28              15.26               1.26
+std     22,255.84                  9.76                   0.96                     1.12                0.87                0.85                    0.84                 1.00              32.20               1.46
+min          1.00                 20.00                   2.00                     2.00                2.00                2.00                    2.00                 2.00               0.00               0.01
+25%     19,274.75                 90.00                   9.00                     9.00               10.00               10.00                    9.00                 9.00               0.00               0.27
+50%     38,548.50                 96.00                  10.00                    10.00               10.00               10.00                   10.00                10.00               4.00               0.77
+75%     57,822.25                100.00                  10.00                    10.00               10.00               10.00                   10.00                10.00              15.00               1.71
+max     77,096.00                100.00                  10.00                    10.00               10.00               10.00                   10.00                10.00             578.00              16.56
+</code></pre>
+<h4 id="nan-counts">NaN counts</h4>
+<pre><code>shuttle_id                     0
+review_scores_rating       21140
+review_scores_comfort      21200
+review_scores_amenities    21187
+review_scores_trip         21263
+review_scores_crew         21194
+review_scores_location     21265
+review_scores_price        21268
+number_of_reviews              0
+reviews_per_month          19543
+</code></pre>
+<h4 id="unique-values">Unique Values</h4>
+<pre><code>shuttle_id                 77096
+review_scores_rating          55
+review_scores_comfort          9
+review_scores_amenities        9
+review_scores_trip             9
+review_scores_crew             9
+review_scores_location         8
+review_scores_price            9
+number_of_reviews            369
+reviews_per_month            949
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../shuttles/" class="btn btn-neutral float-left" title="pandas.DataFrame: shuttles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../model_input_table/" class="btn btn-neutral float-right" title="pandas.DataFrame: model_input_table">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../shuttles/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../model_input_table/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
